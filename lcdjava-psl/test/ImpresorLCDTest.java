@@ -62,4 +62,6 @@ public class ImpresorLCDTest {
         assertEquals(expResult, result);
     }
     
+    
+    
 }

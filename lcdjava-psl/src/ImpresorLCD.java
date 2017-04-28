@@ -3,10 +3,7 @@ import static java.lang.Character.isDigit;
 import static java.lang.Integer.parseInt;
 import static java.lang.String.valueOf;
 import static java.lang.System.out;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -132,85 +129,10 @@ public class ImpresorLCD {
      * @param numero Digito
      */
     private void adicionarDigito(int numero) {
+        
+        Digito digito = new Digito(numero);
 
-        // Establece los segmentos de cada numero
-        List<Integer> segList = new ArrayList<>();
-
-        switch (numero) {
-            case 1:
-                segList.add(3);
-                segList.add(4);
-                break;
-            case 2:
-                segList.add(5);
-                segList.add(3);
-                segList.add(6);
-                segList.add(2);
-                segList.add(7);
-                break;
-            case 3:
-                segList.add(5);
-                segList.add(3);
-                segList.add(6);
-                segList.add(4);
-                segList.add(7);
-                break;
-            case 4:
-                segList.add(1);
-                segList.add(6);
-                segList.add(3);
-                segList.add(4);
-                break;
-            case 5:
-                segList.add(5);
-                segList.add(1);
-                segList.add(6);
-                segList.add(4);
-                segList.add(7);
-                break;
-            case 6:
-                segList.add(5);
-                segList.add(1);
-                segList.add(6);
-                segList.add(2);
-                segList.add(7);
-                segList.add(4);
-                break;
-            case 7:
-                segList.add(5);
-                segList.add(3);
-                segList.add(4);
-                break;
-            case 8:
-                segList.add(1);
-                segList.add(2);
-                segList.add(3);
-                segList.add(4);
-                segList.add(5);
-                segList.add(6);
-                segList.add(7);
-                break;
-            case 9:
-                segList.add(1);
-                segList.add(3);
-                segList.add(4);
-                segList.add(5);
-                segList.add(6);
-                segList.add(7);
-                break;
-            case 0:
-                segList.add(1);
-                segList.add(2);
-                segList.add(3);
-                segList.add(4);
-                segList.add(5);
-                segList.add(7);
-                break;
-            default:
-                break;
-        }
-
-        Iterator<Integer> iterator = segList.iterator();
+        Iterator<Integer> iterator = digito.getSegmentos().iterator();
 
         while (iterator.hasNext()) {
             adicionarSegmento(iterator.next());

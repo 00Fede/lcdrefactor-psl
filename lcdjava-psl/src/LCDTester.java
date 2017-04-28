@@ -16,8 +16,6 @@ public class LCDTester {
     
     
     public static void main(String[] args) {
-        int res = 7/2;
-        System.out.println("print "+res);
         List<String> listaComando = new ArrayList<>();
         String comando;
         int espacioDig;
