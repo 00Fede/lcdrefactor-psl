@@ -12,7 +12,7 @@ public class LCDTester {
     /**
      * Cadena que marca el final de la entrada
      */
-    static final String CADENA_FINAL = "0,0";
+    private static final String CADENA_FINAL = "0,0";
     
     
     public static void main(String[] args) {
@@ -77,5 +77,5 @@ public class LCDTester {
         }
 
     }
-
+    
 }
